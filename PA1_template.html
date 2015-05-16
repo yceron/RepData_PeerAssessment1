@@ -152,6 +152,7 @@ print(filled.steps.day.mean)</code></pre>
 <pre class="r"><code>filled.steps.day.median &lt;- median(daily.filled.data$total.steps)
 print(filled.steps.day.median)</code></pre>
 <pre><code>## [1] 10766.19</code></pre>
+<p>The mean is the same but the median shows a little difference.</p>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
@@ -162,6 +163,7 @@ print(filled.steps.day.median)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Make a panel plot containing a time series plot (i.e. type = “l” ) of the 5minute interval (xaxis) and the average number of steps taken, averaged across all weekday days or weekend days (yaxis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.</li>
 </ol>
+<p>Weekdays have a higher peak than weekends.</p>
 <pre class="r"><code>interval.daily.filled.data &lt;- ddply(daily.filled.data, c('interval','day.of.week'), summarise, avg.steps= mean(steps))
 
 ggplot(interval.daily.filled.data,  aes(x=interval, y=avg.steps))+ 

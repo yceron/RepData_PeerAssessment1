@@ -141,6 +141,7 @@ print(filled.steps.day.median)
 ## [1] 10766.19
 ```
 
+The mean is the same but the median shows a little difference.
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -153,6 +154,7 @@ daily.filled.data <- mutate(filled.data, day.of.week = ifelse(weekdays(date) %in
 
 2. Make a panel plot containing a time series plot (i.e. type = "l" ) of the 5minute interval (xaxis) and the average number of steps taken, averaged across all weekday days or weekend days (yaxis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
+Weekdays have a higher peak than weekends.
 
 
 ```r
